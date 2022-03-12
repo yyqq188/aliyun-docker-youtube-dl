@@ -5,5 +5,6 @@ COPY upload.py /
 COPY exec.sh /
 COPY install.sh /
 RUN chmod u+x /exec.sh
+RUN chmod u+x /install.sh
 RUN /install.sh
 ENV PATH /root/miniconda3/bin:$PATH
