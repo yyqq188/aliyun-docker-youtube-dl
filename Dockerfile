@@ -5,5 +5,4 @@ COPY upload.py /
 COPY exec.sh /
 RUN chmod u+x /exec.sh
 ENV PATH /root/miniconda3/bin:$PATH
-RUN pip install fabric -i https://pypi.douban.com/simple --trusted-host=pypi.douban.com
-CMD ["python"]
+RUN /bin/bash -c "pip install fabric -i https://pypi.douban.com/simple --trusted-host=pypi.douban.com"
